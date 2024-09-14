@@ -64,9 +64,10 @@ public class UserController {
         Optional.ofNullable(user.getDni()).ifPresent(updatedDataUser::setDni);
         Optional.ofNullable(user.getResidence()).ifPresent(updatedDataUser::setResidence);
 
-        if (user.getAge() != 0) {
+        if(user.getAge() != 0) {
             updatedDataUser.setAge(user.getAge());
         }
+
 
         User savedUser = userService.saveUser(updatedDataUser);
 
