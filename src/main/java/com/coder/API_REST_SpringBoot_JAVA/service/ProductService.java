@@ -28,4 +28,20 @@ public class ProductService {
         }
         return false;
     }
+
+    public Optional<Product> updateProductStock(UUID productId, int quantity) {
+        Optional<Product> existingProduct = productRepository.findById(productId);
+        if (existingProduct.isPresent()) {
+            Product product = existingProduct.get();
+            int newStock = product.getStock() - quantity;
+            if (newStock < 0) {
+                return Optional.empty();
+            }
+            product.setStock(newStock);
+            productRepository.save(product);
+            return Optional.of(product);
+        } else {
+            return Optional.empty();
+        }
+    }
 }

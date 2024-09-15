@@ -1,0 +1,23 @@
+[
+  {
+    "title": "iPhone 13",
+    "description": "El último iPhone con pantalla OLED y cámara avanzada.",
+    "price": 999,
+    "stock": 20,
+    "category": "télefonos"
+  },
+  {
+    "title": "Oblea Kitkat",
+    "description": "4 Fingers X 41.5 Gr.",
+    "price": 850,
+    "stock": 75,
+    "category": "Golosinas"
+  },
+  {
+    "title": "Manzanas Rojas",
+    "description": "Comercial en bolsa malla x 1 Kg.",
+    "price": 1790,
+    "stock": 98,
+    "category": "Frutas-verduras"
+  }
+]
